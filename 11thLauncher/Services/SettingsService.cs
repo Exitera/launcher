@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Threading;
 using System.Windows;
 using Caliburn.Micro;
 using MahApps.Metro;
@@ -218,8 +217,8 @@ namespace _11thLauncher.Services
                 if (cultureMatch != null)
                     ApplicationSettings.Language = cultureMatch;
             }
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(ApplicationConfig.Languages.Contains(ApplicationSettings.Language) 
-                ? ApplicationSettings.Language 
+            CultureInfo.DefaultThreadCurrentUICulture = CultureInfo.GetCultureInfo(ApplicationConfig.Languages.Contains(ApplicationSettings.Language)
+                ? ApplicationSettings.Language
                 : ApplicationConfig.Languages.First());
 
             Logger.LogDebug("SettingsService", $"Finished reading settings, result was: {loadResult}");
