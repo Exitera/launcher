@@ -28,10 +28,20 @@ namespace _11thLauncher.Models
 
         #endregion
 
+        #region Methods
+
         public void SetStatus(bool enabled, string value)
         {
             base.SetStatus(enabled);
             _value = value;
         }
+
+        public override void CopyStatus(LaunchParameter parameter)
+        {
+            base.CopyStatus(parameter);
+            _value = ((TextParameter)parameter).Value;
+        }
+
+        #endregion
     }
 }
