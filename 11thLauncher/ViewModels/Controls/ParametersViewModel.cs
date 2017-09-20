@@ -55,7 +55,7 @@ namespace _11thLauncher.ViewModels.Controls
             foreach (var parameter in Parameters)
             {
                 var profileParameter = message.Parameters.FirstOrDefault(parameter.Equals);
-                parameter.CopyStatus(profileParameter);
+                if (profileParameter != null) parameter.CopyStatus(profileParameter);
             }
 
             CollectionViewSource.GetDefaultView(Parameters).Refresh();
