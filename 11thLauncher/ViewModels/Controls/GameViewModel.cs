@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
+using MahApps.Metro.Controls.Dialogs;
 using _11thLauncher.Messages;
 using _11thLauncher.Models;
 using _11thLauncher.Services.Contracts;
@@ -97,7 +98,7 @@ namespace _11thLauncher.ViewModels.Controls
 
         #region Message handling
 
-        public void Handle(ProfileLoadedMessage message)
+        public async void Handle(ProfileLoadedMessage message)
         {
             _loadingProfile = true;
 
@@ -185,6 +186,13 @@ namespace _11thLauncher.ViewModels.Controls
                     Application.Current.Shutdown();
                     break;
                 case StartAction.Nothing:
+                    _eventAggregator.PublishOnUIThreadAsync(new ShowNotificationMessage
+                    {
+                        Title = Resources.Strings.S_MSG_LAUNCHING_TITLE,
+                        Content = _gameService.LaunchSettings.LaunchOption == LaunchOption.Normal 
+                            ? Resources.Strings.S_MSG_LAUNCHING_CONTENT_SP 
+                            : $"{Resources.Strings.S_MSG_LAUNCHING_CONTENT_MP} {_gameService.LaunchSettings.Server}:{_gameService.LaunchSettings.Port}"
+                    });
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -1213,6 +1213,33 @@ namespace _11thLauncher.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Starting ArmA 3 and joining.
+        /// </summary>
+        public static string S_MSG_LAUNCHING_CONTENT_MP {
+            get {
+                return ResourceManager.GetString("S_MSG_LAUNCHING_CONTENT_MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Starting ArmA 3.
+        /// </summary>
+        public static string S_MSG_LAUNCHING_CONTENT_SP {
+            get {
+                return ResourceManager.GetString("S_MSG_LAUNCHING_CONTENT_SP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launching game.
+        /// </summary>
+        public static string S_MSG_LAUNCHING_TITLE {
+            get {
+                return ResourceManager.GetString("S_MSG_LAUNCHING_TITLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You have the latest available version of the program.
         /// </summary>
         public static string S_MSG_NO_UPDATES_CONTENT {

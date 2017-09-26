@@ -11,7 +11,8 @@ using _11thLauncher.ViewModels.Controls;
 
 namespace _11thLauncher.ViewModels
 {
-    public class ShellViewModel : PropertyChangedBase, IHandle<ShowDialogMessage>, IHandle<ShowQuestionDialogMessage>, IHandle<ThemeChangedMessage>, IHandle<ServerQueryFinished>
+    public class ShellViewModel : PropertyChangedBase, IHandle<ShowDialogMessage>, IHandle<ShowQuestionDialogMessage>, IHandle<ThemeChangedMessage>, IHandle<ServerQueryFinished>,
+        IHandle<ShowNotificationMessage>
     {
         #region Fields
 
@@ -286,6 +287,17 @@ namespace _11thLauncher.ViewModels
                     NegativeButtonText = Resources.Strings.S_MSG_OPTION_NO
                 });
             message.Callback(result);
+        }
+
+        public async void Handle(ShowNotificationMessage message)
+        {
+            ProgressDialogController controller = await _dialogCoordinator.ShowProgressAsync(this, message.Title, message.Content);
+            for (double i = 0; i < 1; i+=0.002)
+            {
+                await Task.Delay(1);
+                controller.SetProgress(i);
+            }
+            await controller.CloseAsync();
         }
 
         public void Handle(ThemeChangedMessage message)

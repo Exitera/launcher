@@ -741,4 +741,13 @@
   <data name="S_BUTTON_BROWSECONFIG" xml:space="preserve">
     <value>Explorar configuración</value>
   </data>
+  <data name="S_MSG_LAUNCHING_TITLE" xml:space="preserve">
+    <value>Lanzando juego</value>
+  </data>
+  <data name="S_MSG_LAUNCHING_CONTENT_SP" xml:space="preserve">
+    <value>Iniciando ArmA 3</value>
+  </data>
+  <data name="S_MSG_LAUNCHING_CONTENT_MP" xml:space="preserve">
+    <value>Iniciando ArmA 3 y conectando a</value>
+  </data>
 </root>
