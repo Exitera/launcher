@@ -138,6 +138,15 @@
                     <Label HorizontalAlignment="Left" VerticalAlignment="Top" Margin="290,29,0,0"  Width="242" Height="54">
                         <AccessText Text="{x:Static resx:Strings.S_LABEL_RESET_DISCLAIMER}" FontWeight="Medium" TextWrapping="WrapWithOverflow" />
                     </Label>
+                    <Label Content="{x:Static resx:Strings.S_LOGLEVEL}" 
+                           HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,83,0,0" />
+                    <ComboBox x:Name="LogLevel" 
+                              ItemsSource="{Binding Source={util:Enumeration {x:Type model:LogLevel}}}" DisplayMemberPath="Description"
+                              SelectedValue="{Binding LogLevel}" SelectedValuePath="Value"
+                              HorizontalAlignment="Left" VerticalAlignment="Top"  Width="161"
+                              Margin="124,83,0,0" SelectedIndex="0" />
+                    <Button x:Name="BrowseConfig" Content="{x:Static resx:Strings.S_BUTTON_BROWSECONFIG}" 
+                        HorizontalAlignment="Left" VerticalAlignment="Top" Margin="304,83,0,0"  Width="103"/>
                 </Grid>
             </TabItem>
         </controls:MetroTabControl>

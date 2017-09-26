@@ -723,4 +723,22 @@
   <data name="S_MSG_OPTION_YES" xml:space="preserve">
     <value>Sí</value>
   </data>
+  <data name="S_LOGLEVEL" xml:space="preserve">
+    <value>Nivel de logging</value>
+  </data>
+  <data name="S_LOGLEVEL_NONE" xml:space="preserve">
+    <value>Ninguno</value>
+  </data>
+  <data name="S_LOGLEVEL_INFO" xml:space="preserve">
+    <value>Info (por defecto)</value>
+  </data>
+  <data name="S_LOGLEVEL_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="S_LOGLEVEL_DEBUG" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="S_BUTTON_BROWSECONFIG" xml:space="preserve">
+    <value>Explorar configuración</value>
+  </data>
 </root>

@@ -1,11 +1,7 @@
-﻿using Newtonsoft.Json;
-
-namespace _11thLauncher.Models
+﻿namespace _11thLauncher.Models
 {
     public class ApplicationSettings
     {
-        private LogLevel? _logLevel;
-
         #region Properties
 
         public bool CheckUpdates = true;
@@ -20,16 +16,10 @@ namespace _11thLauncher.Models
         public string JavaPath = string.Empty;
         public string Arma3SyncPath = string.Empty;
 
-        [JsonProperty(NullValueHandling = NullValueHandling.Ignore)]
-        public LogLevel? LogLevel
+        public LogLevel LogLevel
         {
-            get => _logLevel;
-            set
-            {
-                _logLevel = value;
-                if (value != null)
-                    ApplicationConfig.MaxLogLevel = (LogLevel)value;
-            }
+            get => ApplicationConfig.MaxLogLevel;
+            set => ApplicationConfig.MaxLogLevel = value;
         }
 
         #endregion

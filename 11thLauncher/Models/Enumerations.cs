@@ -183,9 +183,13 @@ namespace _11thLauncher.Models
 
     public enum LogLevel
     {
+        [Description("S_LOGLEVEL_NONE")]
         NONE = 0,
+        [Description("S_LOGLEVEL_ERROR")]
         ERROR = 1,
+        [Description("S_LOGLEVEL_INFO")]
         INFO = 2,
+        [Description("S_LOGLEVEL_DEBUG")]
         DEBUG = 3
     }
 }

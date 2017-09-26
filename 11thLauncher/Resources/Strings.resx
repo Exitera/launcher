@@ -703,4 +703,22 @@
   <data name="S_MSG_OPTION_NO" xml:space="preserve">
     <value>No</value>
   </data>
+  <data name="S_LOGLEVEL" xml:space="preserve">
+    <value>Log level</value>
+  </data>
+  <data name="S_LOGLEVEL_NONE" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="S_LOGLEVEL_INFO" xml:space="preserve">
+    <value>Info (default)</value>
+  </data>
+  <data name="S_LOGLEVEL_ERROR" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="S_LOGLEVEL_DEBUG" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="S_BUTTON_BROWSECONFIG" xml:space="preserve">
+    <value>Browse config</value>
+  </data>
 </root>

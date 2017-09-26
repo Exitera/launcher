@@ -19,6 +19,7 @@ namespace _11thLauncher.ViewModels
         private readonly IEventAggregator _eventAggregator;
         private readonly IDialogCoordinator _dialogCoordinator;
         private readonly IFileAccessor _fileAccessor;
+        private readonly IProcessAccessor _processAccessor;
         private readonly ISettingsService _settingsService;
         private readonly IAddonService _addonService;
         private readonly IParameterService _parameterService;
@@ -41,15 +42,18 @@ namespace _11thLauncher.ViewModels
 
         private bool _restarting;
 
+        private LogLevel _logLevel;
+
         #endregion
 
         public SettingsViewModel(IEventAggregator eventAggregator, IDialogCoordinator dialogCoordinator, IFileAccessor fileAccessor, ISettingsService settingsService,
-            IAddonService addonService, IParameterService parameterService)
+            IAddonService addonService, IParameterService parameterService, IProcessAccessor processAccessor)
         {
             _eventAggregator = eventAggregator;
             _eventAggregator.Subscribe(this);
             _dialogCoordinator = dialogCoordinator;
             _fileAccessor = fileAccessor;
+            _processAccessor = processAccessor;
             _settingsService = settingsService;
             _addonService = addonService;
             _parameterService = parameterService;
@@ -179,6 +183,16 @@ namespace _11thLauncher.ViewModels
             set
             {
                 _minimizeNotification = value;
+                NotifyOfPropertyChange();
+            }
+        }
+
+        public LogLevel LogLevel
+        {
+            get => _logLevel;
+            set
+            {
+                _logLevel = value;
                 NotifyOfPropertyChange();
             }
         }
@@ -333,6 +347,14 @@ namespace _11thLauncher.ViewModels
             RestartApplication();
         }
 
+        public void BrowseConfig()
+        {
+            if (_fileAccessor.DirectoryExists(ApplicationConfig.ConfigPath))
+            {
+                _processAccessor.StartProcess(ApplicationConfig.ConfigPath);
+            }
+        }
+
         public void OnClose(ConsoleCancelEventArgs e)
         {
             if (_restarting) return;
@@ -367,6 +389,9 @@ namespace _11thLauncher.ViewModels
             SelectedTheme = _settingsService.ApplicationSettings.ThemeStyle;
             SelectedAccent = _settingsService.ApplicationSettings.AccentColor;
             MinimizeNotification = _settingsService.ApplicationSettings.MinimizeNotification;
+
+            //Advanced
+            LogLevel = _settingsService.ApplicationSettings.LogLevel;
         }
 
         /// <summary>
@@ -392,6 +417,8 @@ namespace _11thLauncher.ViewModels
             _settingsService.ApplicationSettings.ThemeStyle = SelectedTheme;
             _settingsService.ApplicationSettings.AccentColor = SelectedAccent;
             _settingsService.ApplicationSettings.MinimizeNotification = MinimizeNotification;
+
+            _settingsService.ApplicationSettings.LogLevel = LogLevel;
 
             _settingsService.Write();
         }

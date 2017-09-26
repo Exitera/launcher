@@ -592,6 +592,15 @@ namespace _11thLauncher.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Browse config.
+        /// </summary>
+        public static string S_BUTTON_BROWSECONFIG {
+            get {
+                return ResourceManager.GetString("S_BUTTON_BROWSECONFIG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Fill server information.
         /// </summary>
         public static string S_BUTTON_FILL_SERVER_TIP {
@@ -1038,6 +1047,51 @@ namespace _11thLauncher.Resources {
         public static string S_LAUNCH_NORMAL {
             get {
                 return ResourceManager.GetString("S_LAUNCH_NORMAL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log level.
+        /// </summary>
+        public static string S_LOGLEVEL {
+            get {
+                return ResourceManager.GetString("S_LOGLEVEL", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug.
+        /// </summary>
+        public static string S_LOGLEVEL_DEBUG {
+            get {
+                return ResourceManager.GetString("S_LOGLEVEL_DEBUG", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error.
+        /// </summary>
+        public static string S_LOGLEVEL_ERROR {
+            get {
+                return ResourceManager.GetString("S_LOGLEVEL_ERROR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Info (default).
+        /// </summary>
+        public static string S_LOGLEVEL_INFO {
+            get {
+                return ResourceManager.GetString("S_LOGLEVEL_INFO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to None.
+        /// </summary>
+        public static string S_LOGLEVEL_NONE {
+            get {
+                return ResourceManager.GetString("S_LOGLEVEL_NONE", resourceCulture);
             }
         }
         
