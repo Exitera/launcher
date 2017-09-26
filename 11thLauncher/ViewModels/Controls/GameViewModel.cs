@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Windows;
 using Caliburn.Micro;
 using _11thLauncher.Messages;
@@ -87,7 +88,7 @@ namespace _11thLauncher.ViewModels.Controls
                 _gameService.LaunchSettings.Password = _securityService.EncryptPassword(value);
                 NotifyOfPropertyChange();
 
-                if (_loadingProfile) { _loadingProfile = false; return; } //Avoid profile write when loading profile
+                if (_loadingProfile) return; //Avoid profile write when loading profile
                 _eventAggregator.PublishOnCurrentThread(new SaveProfileMessage());
             }
         }
@@ -114,6 +115,9 @@ namespace _11thLauncher.ViewModels.Controls
 
             _gameService.LaunchSettings.Password = message.LaunchSettings.Password;
             NotifyOfPropertyChange(() => Password);
+
+            await Task.Delay(1000);
+            _loadingProfile = false;
         }
 
         public void Handle(FillServerInfoMessage message)
