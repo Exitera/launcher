@@ -25,23 +25,13 @@ namespace _11thLauncher
         {
             new Preset
             {
-                Name = "Guerra Moderna",
-                Addons = new[] { "@cba_a3", "@ace", "@acex", "@acre2", "@cup_terrains", "@meu", "@meu_maps", "@meu_rhs", "@meu_fleet", "@rhsafrf", "@rhsgref", "@rhsusaf" }
+                Name = "Exile Live",
+                Addons = new[] { "!Workshop\\@CBA_A3", "!Workshop\\@ExileMod", "!Workshop\\@Advanced Towing", "!Workshop\\@CUP Units", "!Workshop\\@CUP Vehicles", "!Workshop\\@CUP Weapons", "!Workshop\\@Extended_Base_Mod", "!Workshop\\@task_force_radio" }
             },
             new Preset
             {
-                Name = "Guerra Moderna [ALiVE]",
-                Addons = new[] { "@cba_a3", "@ace", "@acex", "@acre2", "@cup_terrains", "@meu", "@meu_maps", "@meu_rhs", "@meu_fleet", "@rhsafrf", "@rhsgref", "@rhsusaf", "@alive" }
-            },
-            new Preset
-            {
-                Name = "Vietnam [Unsung]",
-                Addons = new[] { "@cba_a3", "@ace", "@acex", "@acre2", "@meu", "@unsung" }
-            },
-            new Preset
-            {
-                Name = "WW2 [IFA/FOW]",
-                Addons = new[] { "@cba_a3", "@ace", "@acex", "@acre2", "@cup_terrains", "@ifa3_aio_lite", "@faces_of_war", "@ifa3_fow_compat" }
+                Name = "Exile Dev",
+                Addons = new[] { "!Workshop\\@CBA_A3", "!Workshop\\@ExileMod", "!Workshop\\@Advanced Towing", "!Workshop\\@CUP Units", "!Workshop\\@CUP Vehicles", "!Workshop\\@CUP Weapons", "!Workshop\\@Extended_Base_Mod", "!Workshop\\@task_force_radio" }
             }
         };
 
@@ -59,49 +49,17 @@ namespace _11thLauncher
         {
             new Server
             {
-                Name = "Coop",
-                Address = "11thmeu.es",
-                Port = 2302,
+                Name = "Exile Live",
+                Address = "148.251.179.26",
+                Port = 2310,
                 IsDefault = true,
                 IsEnabled = true
             },
             new Server
             {
-                Name = "Academia",
-                Address = "11thmeu.es",
-                Port = 2322,
-                IsDefault = true,
-                IsEnabled = true
-            },
-            new Server
-            {
-                Name = "ALiVE",
-                Address = "11thmeu.es",
-                Port = 2332,
-                IsDefault = true,
-                IsEnabled = true
-            },
-            new Server
-            {
-                Name = "Vietnam",
-                Address = "11thmeu.es",
-                Port = 2352,
-                IsDefault = true,
-                IsEnabled = true
-            },
-            new Server
-            {
-                Name = "WW2",
-                Address = "11thmeu.es",
-                Port = 2362,
-                IsDefault = true,
-                IsEnabled = true
-            },
-            new Server
-            {
-                Name = "Test",
-                Address = "11thmeu.es",
-                Port = 2342,
+                Name = "Exile Dev",
+                Address = "148.251.179.26",
+                Port = 2320,
                 IsDefault = true,
                 IsEnabled = true
             }
@@ -128,7 +86,7 @@ namespace _11thLauncher
         // Updater Service
         //
         public const string UpdaterServiceUserAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko";
-        public const string GithubApiReleaseEndpoint = "https://api.github.com/repos/11thmeu/launcher/releases/latest";
+        public const string GithubApiReleaseEndpoint = "https://api.github.com/repos/exitera/launcher/releases/latest";
         public const string GithubApiCurrentVersion = "application/vnd.github.v3+json";
         public const string GithubVersionTagFormat = "v{0}";
         public static readonly string LegacyUpdaterPath = Path.Combine(Path.GetTempPath(), "11thLauncherUpdater.exe");
