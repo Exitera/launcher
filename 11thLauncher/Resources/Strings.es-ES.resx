@@ -433,22 +433,22 @@
     <value>Comprobar estado del servidor</value>
   </data>
   <data name="S_LABEL_SERVER_NAME" xml:space="preserve">
-    <value>Nombre:</value>
+    <value>Server Name:</value>
   </data>
   <data name="S_LABEL_SERVER_MISSION" xml:space="preserve">
-    <value>Misión:</value>
+    <value>Mission:</value>
   </data>
   <data name="S_LABEL_SERVER_MAP" xml:space="preserve">
-    <value>Mapa:</value>
+    <value>Map:</value>
   </data>
   <data name="S_LABEL_SERVER_PING" xml:space="preserve">
     <value>Ping:</value>
   </data>
   <data name="S_LABEL_SERVER_VERSION" xml:space="preserve">
-    <value>Versión:</value>
+    <value>Version:</value>
   </data>
   <data name="S_LABEL_SERVER_PLAYERS" xml:space="preserve">
-    <value>Jugadores:</value>
+    <value>Spieler:</value>
   </data>
   <data name="S_LABEL_PROFILE_LIST" xml:space="preserve">
     <value>Lista de perfiles</value>
@@ -532,7 +532,7 @@
     <value>Interfaz</value>
   </data>
   <data name="S_LABEL_YES" xml:space="preserve">
-    <value>Sí</value>
+    <value>Ja</value>
   </data>
   <data name="S_LABEL_NO" xml:space="preserve">
     <value>No</value>
@@ -586,10 +586,10 @@
     <value>Repositorios</value>
   </data>
   <data name="S_A3S_DISABLED_TIP" xml:space="preserve">
-    <value>Arma3Sync no está configurado, configuralo en la ventana de opciones</value>
+    <value>Arma3Sync Ist nicht Installiert</value>
   </data>
   <data name="S_A3S_ENABLED_TIP" xml:space="preserve">
-    <value>Haz click para iniciar Arma3Sync</value>
+    <value>Arma3Sync starten</value>
   </data>
   <data name="S_BTN_REPOSITORY_UNKNOWN" xml:space="preserve">
     <value>Desconocido</value>
@@ -718,7 +718,7 @@
     <value>Se ha producido un error comprobando actualizaciones. Inténtalo de nuevo más tarde</value>
   </data>
   <data name="S_MSG_OPTION_NO" xml:space="preserve">
-    <value>No</value>
+    <value>nein</value>
   </data>
   <data name="S_MSG_OPTION_YES" xml:space="preserve">
     <value>Sí</value>

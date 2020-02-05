@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exile", "Exile.csproj", "{55F0A48D-39EC-4A62-AB55-1243999B0899}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55F0A48D-39EC-4A62-AB55-1243999B0899}.Debug|x86.ActiveCfg = Debug|x86
+		{55F0A48D-39EC-4A62-AB55-1243999B0899}.Debug|x86.Build.0 = Debug|x86
+		{55F0A48D-39EC-4A62-AB55-1243999B0899}.Release|x86.ActiveCfg = Release|x86
+		{55F0A48D-39EC-4A62-AB55-1243999B0899}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C80D98E-285D-47CB-9C9E-08D7C19FFEC4}
+	EndGlobalSection
+EndGlobal

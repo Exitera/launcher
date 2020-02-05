@@ -1,0 +1,750 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{55F0A48D-39EC-4A62-AB55-1243999B0899}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>ConsoleApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Exile</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include=".git\COMMIT_EDITMSG" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\FETCH_HEAD" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\heads\release" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\logs\refs\remotes\origin\master" />
+    <None Include=".git\logs\refs\remotes\origin\release" />
+    <None Include=".git\logs\refs\remotes\upstream\develop" />
+    <None Include=".git\logs\refs\remotes\upstream\master" />
+    <None Include=".git\objects\06\292358c3de4d3158d90d8c65f06f6abf7475cc" />
+    <None Include=".git\objects\0d\41ebc531ae415aac0a09b04b8d11d1c4eafd6e" />
+    <None Include=".git\objects\12\132b0fbc3017a75c37ad4d7ff064b1c1c208ce" />
+    <None Include=".git\objects\13\ccc64d5f2f9790da5d27328396c2e8345f9df7" />
+    <None Include=".git\objects\14\b47fcafa468dcf950dfcd92b3b4143318f480e" />
+    <None Include=".git\objects\15\aac54c4cdf71c0b72056c8dba3cb0011e11f1d" />
+    <None Include=".git\objects\1a\ea5d9dcc8c93204a72b438fb5d487d35ca9571" />
+    <None Include=".git\objects\1e\22abeefbfa7400df694fc6cac76e7b6d0298ae" />
+    <None Include=".git\objects\1e\e68bf312e1b50fc59b2414c388ae1879a9b4a9" />
+    <None Include=".git\objects\1e\ec1264f2188d99938b91f8d722c1f30435bb38" />
+    <None Include=".git\objects\3f\23cddad5ec375e48d176b7e033ddbfafb4cf35" />
+    <None Include=".git\objects\52\9589b5006ec139a6b8629b85838492d4ed7f13" />
+    <None Include=".git\objects\61\3f835d96097f060f8d62f14a73f0c37cac7202" />
+    <None Include=".git\objects\64\7ed06c6f64313edc29b33a55ce3cb1aeec6cd2" />
+    <None Include=".git\objects\6a\58b49cc27e0babe3131f2326f5cf26523f7875" />
+    <None Include=".git\objects\6e\b6b1a93f2fae0946a6a67fee69a3074904a233" />
+    <None Include=".git\objects\6f\476c8bf9c550adc1bb91a2601cde872a40e9ac" />
+    <None Include=".git\objects\72\8829bfc9d91b73005e52a2a59cde07393ad410" />
+    <None Include=".git\objects\7a\abbf321b68b1a0dffee0dade61c5fd01c4cd7d" />
+    <None Include=".git\objects\7a\f2b5b40efccacc904776889d533789558f6c4d" />
+    <None Include=".git\objects\8c\aeb6bc420b19dbd10f9f23fa56f3b5daf21869" />
+    <None Include=".git\objects\96\07fe88ff39d5f31763f01e8f9381eb6ec3eca5" />
+    <None Include=".git\objects\a4\afc3b3b7edac2a4342a9872134754c7d1e80c9" />
+    <None Include=".git\objects\a9\4c1294018a5ab75acdf99d427b3ab61c677170" />
+    <None Include=".git\objects\aa\26511d6ecdbf93775c12a6928229413ca33f65" />
+    <None Include=".git\objects\b4\06a5a0f4b81c42b189cc899fbef9693568e718" />
+    <None Include=".git\objects\b5\368234bf2f1f3d3f49c40ee3919dee2d900c30" />
+    <None Include=".git\objects\b9\e730cd06c3e0622c7d3f7307b2d0c015898c97" />
+    <None Include=".git\objects\c7\c25243683210173b12815be3988ae42c07223c" />
+    <None Include=".git\objects\d8\2dd05ed21a3d2be36816de6051ee03f0646cfe" />
+    <None Include=".git\objects\db\8cd9f796a13102fd6b27047b49276b41fa0920" />
+    <None Include=".git\objects\ec\143927e924a433b431eba18fcbc8392a207092" />
+    <None Include=".git\objects\ef\a6be7194b25093d85dbbcb0afd76721956b1ea" />
+    <None Include=".git\objects\f5\840f245ceff5ec285dfdf1e45dc4fadfb56971" />
+    <None Include=".git\objects\fb\93382aa31eab99a81e00a0e67b23eef1d22a4b" />
+    <None Include=".git\objects\ff\30d9f68ec9f0d12adede5d9c37d02544690120" />
+    <None Include=".git\objects\pack\pack-f645ccc38a274089104b184c22a8594969962503.idx" />
+    <None Include=".git\objects\pack\pack-f645ccc38a274089104b184c22a8594969962503.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\heads\release" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".git\refs\remotes\origin\master" />
+    <None Include=".git\refs\remotes\origin\release" />
+    <None Include=".git\refs\remotes\upstream\develop" />
+    <None Include=".git\refs\remotes\upstream\master" />
+    <None Include=".vs\11thLauncher\v16\.suo" />
+    <None Include=".vs\11thLauncher\v16\Server\sqlite3\db.lock" />
+    <None Include=".vs\11thLauncher\v16\Server\sqlite3\storage.ide" />
+    <None Include=".vs\launcher\v16\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="11thLauncher.Updater\11thLauncher.Updater.csproj" />
+    <None Include="11thLauncher.Updater\11thLauncher.Updater_TemporaryKey.pfx" />
+    <None Include="11thLauncher.Updater\App.config" />
+    <None Include="11thLauncher.Updater\bin\Debug\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\bin\Debug\11thLauncher.Updater.exe.config" />
+    <None Include="11thLauncher.Updater\bin\Debug\11thLauncher.Updater.exe.manifest" />
+    <None Include="11thLauncher.Updater\bin\Release\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\bin\Release\11thLauncher.Updater.exe.config" />
+    <None Include="11thLauncher.Updater\bin\Release\11thLauncher.Updater.exe.manifest" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.csproj.GenerateResource.cache" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.csprojAssemblyReference.cache" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.exe.manifest" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater_MarkupCompile.cache" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater_MarkupCompile.i.cache" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater_MarkupCompile.i.lref" />
+    <None Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater_MarkupCompile.lref" />
+    <None Include="11thLauncher.Updater\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="11thLauncher.Updater\obj\Debug\MainWindow.baml" />
+    <None Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.csproj.GenerateResource.cache" />
+    <None Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.exe.manifest" />
+    <None Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater_MarkupCompile.cache" />
+    <None Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater_MarkupCompile.lref" />
+    <None Include="11thLauncher.Updater\obj\Release\MainWindow.baml" />
+    <None Include="11thLauncher.Updater\Properties\Settings.settings" />
+    <None Include="11thLauncher.Updater\publish\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\publish\Application Files\11thLauncher.Updater_1_0_0_0\11thLauncher.Updater.application" />
+    <None Include="11thLauncher.Updater\publish\Application Files\11thLauncher.Updater_1_0_0_0\11thLauncher.Updater.exe.config.deploy" />
+    <None Include="11thLauncher.Updater\publish\Application Files\11thLauncher.Updater_1_0_0_0\11thLauncher.Updater.exe.deploy" />
+    <None Include="11thLauncher.Updater\publish\Application Files\11thLauncher.Updater_1_0_0_0\11thLauncher.Updater.exe.manifest" />
+    <None Include="11thLauncher\11thLauncher.csproj" />
+    <None Include="11thLauncher\11thLauncher.csproj.DotSettings" />
+    <None Include="11thLauncher\11thLauncher_TemporaryKey.pfx" />
+    <None Include="11thLauncher\bin\Debug\11thLauncher.application" />
+    <None Include="11thLauncher\bin\Debug\11thLauncher.exe.config" />
+    <None Include="11thLauncher\bin\Debug\11thLauncher.exe.manifest" />
+    <None Include="11thLauncher\bin\Release\11thLauncher.application" />
+    <None Include="11thLauncher\bin\Release\11thLauncher.exe.config" />
+    <None Include="11thLauncher\bin\Release\11thLauncher.exe.manifest" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher.application" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher.csproj.GenerateResource.cache" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher.csprojAssemblyReference.cache" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher.exe.config" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher.exe.manifest" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher_MarkupCompile.cache" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher_MarkupCompile.i.cache" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher_MarkupCompile.i.lref" />
+    <None Include="11thLauncher\obj\Debug\11thLauncher_MarkupCompile.lref" />
+    <None Include="11thLauncher\obj\Debug\App.baml" />
+    <None Include="11thLauncher\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="11thLauncher\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="11thLauncher\obj\Debug\ExileLauncher_MarkupCompile.i.cache" />
+    <None Include="11thLauncher\obj\Debug\Resources\MahApps.Metro.Resources\Icons.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\AboutView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\AddonsView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\GameView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\ParametersView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\ProfileManagerView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\ProfileSelectorView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\RepositoryStatusView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\ServerQueryView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\ServerStatusView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\Controls\StatusbarView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\SettingsView.baml" />
+    <None Include="11thLauncher\obj\Debug\Views\ShellView.baml" />
+    <None Include="11thLauncher\obj\Release\11thLauncher.application" />
+    <None Include="11thLauncher\obj\Release\11thLauncher.csproj.GenerateResource.cache" />
+    <None Include="11thLauncher\obj\Release\11thLauncher.csprojAssemblyReference.cache" />
+    <None Include="11thLauncher\obj\Release\11thLauncher.exe.config" />
+    <None Include="11thLauncher\obj\Release\11thLauncher.exe.manifest" />
+    <None Include="11thLauncher\obj\Release\11thLauncher_MarkupCompile.cache" />
+    <None Include="11thLauncher\obj\Release\11thLauncher_MarkupCompile.lref" />
+    <None Include="11thLauncher\obj\Release\App.baml" />
+    <None Include="11thLauncher\obj\Release\Resources\MahApps.Metro.Resources\Icons.baml" />
+    <None Include="11thLauncher\obj\Release\Views\AboutView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\AddonsView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\GameView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\ParametersView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\ProfileManagerView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\ProfileSelectorView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\RepositoryStatusView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\ServerQueryView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\ServerStatusView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\Controls\StatusbarView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\SettingsView.baml" />
+    <None Include="11thLauncher\obj\Release\Views\ShellView.baml" />
+    <None Include="11thLauncher\packages.config" />
+    <None Include="11thLauncher\Properties\Settings.settings" />
+    <None Include="11thLauncher\publish\11thLauncher.application" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\11thLauncher.application" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\11thLauncher.exe.config.deploy" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\11thLauncher.exe.deploy" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\11thLauncher.exe.manifest" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\es-ES\11thLauncher.resources.dll.deploy" />
+    <None Include="11thLauncher\publish\Application Files\11thLauncher_1_0_0_1\Resources\icon.ico.deploy" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\es-ES\ExileLauncher.resources.dll.deploy" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\ExileLauncher.application" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\ExileLauncher.exe.config.deploy" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\ExileLauncher.exe.deploy" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\ExileLauncher.exe.manifest" />
+    <None Include="11thLauncher\publish\Application Files\ExileLauncher_1_0_0_0\Resources\icon.ico.deploy" />
+    <None Include="11thLauncher\publish\ExileLauncher.application" />
+    <None Include="A3SDS\.classpath" />
+    <None Include="A3SDS\.project" />
+    <None Include="A3SDS\.settings\org.eclipse.jdt.core.prefs" />
+    <None Include="appveyor.yml" />
+    <None Include="BUILD.md" />
+    <None Include="packages\Caliburn.Micro.3.1.0\.signature.p7s" />
+    <None Include="packages\Caliburn.Micro.3.1.0\Caliburn.Micro.3.1.0.nupkg" />
+    <None Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.UWP.pri" />
+    <None Include="packages\Caliburn.Micro.3.1.0\lib\win81\Caliburn.Micro.Platform.pri" />
+    <None Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Caliburn.Micro.Platform.pri" />
+    <None Include="packages\Caliburn.Micro.Core.3.1.0\.signature.p7s" />
+    <None Include="packages\Caliburn.Micro.Core.3.1.0\Caliburn.Micro.Core.3.1.0.nupkg" />
+    <None Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\.signature.p7s" />
+    <None Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\Hardcodet.NotifyIcon.Wpf.1.0.8.nupkg" />
+    <None Include="packages\MahApps.Metro.1.5.0\.signature.p7s" />
+    <None Include="packages\MahApps.Metro.1.5.0\MahApps.Metro.1.5.0.nupkg" />
+    <None Include="packages\MahApps.Metro.1.5.0\tools\install.ps1" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\.signature.p7s" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\LICENSE.md" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\Newtonsoft.Json.10.0.2.nupkg" />
+    <None Include="packages\Newtonsoft.Json.10.0.2\tools\install.ps1" />
+    <None Include="packages\Resource.Embedder.1.2.2\.signature.p7s" />
+    <None Include="packages\Resource.Embedder.1.2.2\build\Resource.Embedder.targets" />
+    <None Include="packages\Resource.Embedder.1.2.2\Resource.Embedder.1.2.2.nupkg" />
+    <None Include="packages\Resource.Embedder.1.2.2\Tools\install.ps1" />
+    <None Include="packages\Resource.Embedder.1.2.2\Tools\uninstall.ps1" />
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="11thLauncher.Updater\11thLauncher.Updater.csproj.user" />
+    <Content Include="11thLauncher.Updater\bin\Debug\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\bin\Debug\11thLauncher.Updater.pdb" />
+    <Content Include="11thLauncher.Updater\bin\Debug\app.publish\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\bin\Release\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\bin\Release\11thLauncher.Updater.pdb" />
+    <Content Include="11thLauncher.Updater\bin\Release\app.publish\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\icon.ico" />
+    <Content Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.csproj.FileListAbsolute.txt" />
+    <Content Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.pdb" />
+    <Content Include="11thLauncher.Updater\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.csproj.FileListAbsolute.txt" />
+    <Content Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.pdb" />
+    <Content Include="11thLauncher.Updater\publish\setup.exe" />
+    <Content Include="11thLauncher\11thLauncher.csproj.user" />
+    <Content Include="11thLauncher\bin\Debug\11thLauncher.exe" />
+    <Content Include="11thLauncher\bin\Debug\11thLauncher.pdb" />
+    <Content Include="11thLauncher\bin\Debug\app.publish\11thLauncher.exe" />
+    <Content Include="11thLauncher\bin\Release\11thLauncher.exe" />
+    <Content Include="11thLauncher\bin\Release\11thLauncher.pdb" />
+    <Content Include="11thLauncher\bin\Release\app.publish\11thLauncher.exe" />
+    <Content Include="11thLauncher\lib\11thLauncher.Updater.exe" />
+    <Content Include="11thLauncher\lib\A3SDS.jar" />
+    <Content Include="11thLauncher\lib\QueryMaster.dll" />
+    <Content Include="11thLauncher\obj\Debug\11thLauncher.csproj.FileListAbsolute.txt" />
+    <Content Include="11thLauncher\obj\Debug\11thLauncher.exe" />
+    <Content Include="11thLauncher\obj\Debug\11thLauncher.pdb" />
+    <Content Include="11thLauncher\obj\Debug\es-ES\11thLauncher.resources.dll" />
+    <Content Include="11thLauncher\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="11thLauncher\obj\Debug\TempPE\Resources.Strings.Designer.cs.dll" />
+    <Content Include="11thLauncher\obj\Release\11thLauncher.csproj.FileListAbsolute.txt" />
+    <Content Include="11thLauncher\obj\Release\11thLauncher.exe" />
+    <Content Include="11thLauncher\obj\Release\11thLauncher.pdb" />
+    <Content Include="11thLauncher\obj\Release\es-ES\11thLauncher.resources.dll" />
+    <Content Include="11thLauncher\publish\setup.exe" />
+    <Content Include="11thLauncher\Resources\a3logo.png" />
+    <Content Include="11thLauncher\Resources\a3logo_inverted.png" />
+    <Content Include="11thLauncher\Resources\a3sDisabled.png" />
+    <Content Include="11thLauncher\Resources\a3sEnabled.png" />
+    <Content Include="11thLauncher\Resources\game.png" />
+    <Content Include="11thLauncher\Resources\icon.ico" />
+    <Content Include="11thLauncher\Resources\MahApps.Metro.Resources\WindowsIcons-license.txt" />
+    <Content Include="A3SDS\build.xml" />
+    <Content Include="A3SDS\src\es\_11thmeu\a3spipe\A3SPipe.java" />
+    <Content Include="A3SDS\src\es\_11thmeu\a3spipe\domain\LocalRepository.java" />
+    <Content Include="A3SDS\src\es\_11thmeu\a3spipe\domain\RemoteServer.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\constant\EncryptionMode.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\constant\ProtocolType.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\constant\TimeOutValues.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\AbstractProtocole.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\configration\FavoriteServer.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\Ftp.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\AutoConfig.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Changelog.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Changelogs.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Event.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Events.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\FileAttributes.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Repository.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\ServerInfo.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\Sync.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\SyncTreeDirectory.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\SyncTreeLeaf.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\domain\repository\SyncTreeNode.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\exception\ApplicationException.java" />
+    <Content Include="A3SDS\src\fr\soe\a3s\exception\CheckException.java" />
+    <Content Include="doc\capture1.png" />
+    <Content Include="doc\capture2.png" />
+    <Content Include="doc\capture3.png" />
+    <Content Include="doc\capture4.png" />
+    <Content Include="doc\capture5.png" />
+    <Content Include="doc\capture6.png" />
+    <Content Include="doc\capture7.png" />
+    <Content Include="doc\capture8.png" />
+    <Content Include="doc\logo-transparent.png" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoAndroid10\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoAndroid10\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoAndroid10\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoAndroid10\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.Platform.Core.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\MonoTouch10\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net40\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net40\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net40\System.Windows.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net40\System.Windows.Interactivity.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net45\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net45\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net45\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net45\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\net45\System.Windows.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\sl5\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\sl5\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\sl5\System.Windows.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.UWP.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.UWP.XML" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\uap10.0\Caliburn.Micro.Platform.UWP\Properties\Caliburn.Micro.Platform.UWP.rd.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Caliburn.Micro.Platform.XML" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Microsoft.Xaml.Interactions.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\win81\Microsoft.Xaml.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wp8\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wp8\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wp8\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wp8\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wp8\System.Windows.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Microsoft.Xaml.Interactions.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\wpa81\Microsoft.Xaml.Interactivity.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.Platform.Core.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.Platform.Core.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.Platform.Core.xml" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.Platform.dll" />
+    <Content Include="packages\Caliburn.Micro.3.1.0\lib\Xamarin.iOS10\Caliburn.Micro.Platform.xml" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\net40\Caliburn.Micro.dll" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\net40\Caliburn.Micro.XML" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\net45\Caliburn.Micro.dll" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\net45\Caliburn.Micro.xml" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.dll" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.dll.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\portable-net45+win8+wp8+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10+uap10.0\Caliburn.Micro.XML" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\sl5\Caliburn.Micro.dll" />
+    <Content Include="packages\Caliburn.Micro.Core.3.1.0\lib\sl5\Caliburn.Micro.XML" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35-client\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35-client\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35-client\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net35\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40-client\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40-client\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40-client\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net40\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net451\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net45\Hardcodet.Wpf.TaskbarNotification.dll" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net45\Hardcodet.Wpf.TaskbarNotification.pdb" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\lib\net45\Hardcodet.Wpf.TaskbarNotification.xml" />
+    <Content Include="packages\Hardcodet.NotifyIcon.Wpf.1.0.8\readme.txt" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net40\MahApps.Metro.dll" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net40\MahApps.Metro.pdb" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net40\MahApps.Metro.XML" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net40\System.Windows.Interactivity.dll" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.dll" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.pdb" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net45\MahApps.Metro.XML" />
+    <Content Include="packages\MahApps.Metro.1.5.0\lib\net45\System.Windows.Interactivity.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net20\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net20\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net35\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net35\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net40\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.0\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.0\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\netstandard1.3\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net40+sl5+win8+wpa81+wp8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net40+sl5+win8+wpa81+wp8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.dll" />
+    <Content Include="packages\Newtonsoft.Json.10.0.2\lib\portable-net45+win8+wpa81+wp8\Newtonsoft.Json.xml" />
+    <Content Include="packages\Resource.Embedder.1.2.2\Mono.Cecil.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\Mono.Cecil.Mdb.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\Mono.Cecil.Pdb.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\Mono.Cecil.Rocks.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\ResourceEmbedder.Core.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\ResourceEmbedder.Core.pdb" />
+    <Content Include="packages\Resource.Embedder.1.2.2\ResourceEmbedder.MsBuild.dll" />
+    <Content Include="packages\Resource.Embedder.1.2.2\ResourceEmbedder.MsBuild.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="11thLauncher.Updater\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher.Updater\MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Resources\MahApps.Metro.Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\AboutView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\AddonsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\GameView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\ParametersView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\ProfileManagerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\ProfileSelectorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\RepositoryStatusView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\ServerQueryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\ServerStatusView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\Controls\StatusbarView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\SettingsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="11thLauncher\Views\ShellView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="11thLauncher.Updater\App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher.Updater\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher.Updater\obj\Debug\App.g.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Debug\App.g.i.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Debug\MainWindow.g.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Debug\MainWindow.g.i.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Release\App.g.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Release\MainWindow.g.cs" />
+    <Compile Include="11thLauncher.Updater\obj\Release\MainWindow.g.i.cs" />
+    <Compile Include="11thLauncher.Updater\Properties\AssemblyInfo.cs" />
+    <Compile Include="11thLauncher.Updater\Properties\Resources.Designer.cs" />
+    <Compile Include="11thLauncher.Updater\Properties\Settings.Designer.cs" />
+    <Compile Include="11thLauncher\Accessors\ClipboardAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\Contracts\IClipboardAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\Contracts\IFileAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\Contracts\INetworkAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\Contracts\IProcessAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\Contracts\IRegistryAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\FileAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\NetworkAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\ProcessAccessor.cs" />
+    <Compile Include="11thLauncher\Accessors\RegistryAccessor.cs" />
+    <Compile Include="11thLauncher\ApplicationConfig.cs" />
+    <Compile Include="11thLauncher\Converters\CultureDisplayConverter.cs" />
+    <Compile Include="11thLauncher\Converters\JsonLaunchParameterConverter.cs" />
+    <Compile Include="11thLauncher\Converters\LaunchOptionConverter.cs" />
+    <Compile Include="11thLauncher\LauncherBootstraper.cs" />
+    <Compile Include="11thLauncher\Messages\AddonsLoadedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\FillServerInfoMessage.cs" />
+    <Compile Include="11thLauncher\Messages\LoadProfileMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ParametersInitializedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ProfileAddedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ProfileDeletedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ProfileLoadedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\RepositoriesLoadedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\SaveProfileMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ServerQueryFinished.cs" />
+    <Compile Include="11thLauncher\Messages\SettingsLoadedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ShowDialogMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ShowQuestionDialogMessage.cs" />
+    <Compile Include="11thLauncher\Messages\ThemeChangedMessage.cs" />
+    <Compile Include="11thLauncher\Messages\UpdateStatusBarMessage.cs" />
+    <Compile Include="11thLauncher\Models\Addon\Addon.cs" />
+    <Compile Include="11thLauncher\Models\Addon\AddonMetaData.cs" />
+    <Compile Include="11thLauncher\Models\Addon\Preset.cs" />
+    <Compile Include="11thLauncher\Models\ApplicationSettings.cs" />
+    <Compile Include="11thLauncher\Models\ConfigFile.cs" />
+    <Compile Include="11thLauncher\Models\Enumerations.cs" />
+    <Compile Include="11thLauncher\Models\GithubRelease.cs" />
+    <Compile Include="11thLauncher\Models\LaunchSettings.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\BooleanParameter.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\LaunchParameter.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\NumericalParameter.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\SelectionParameter.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\TextParameter.cs" />
+    <Compile Include="11thLauncher\Models\Parameter\ValueItem.cs" />
+    <Compile Include="11thLauncher\Models\Profile\ProfileFile.cs" />
+    <Compile Include="11thLauncher\Models\Profile\UserProfile.cs" />
+    <Compile Include="11thLauncher\Models\Repository.cs" />
+    <Compile Include="11thLauncher\Models\Server\Server.cs" />
+    <Compile Include="11thLauncher\Models\Server\ServerInfo.cs" />
+    <Compile Include="11thLauncher\obj\Debug\App.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\App.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\GeneratedInternalTypeHelper.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\AboutView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\AboutView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\AddonsView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\AddonsView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\GameView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\GameView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ParametersView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ParametersView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ProfileManagerView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ProfileManagerView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ProfileSelectorView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ProfileSelectorView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\RepositoryStatusView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\RepositoryStatusView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ServerQueryView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ServerQueryView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ServerStatusView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\ServerStatusView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\StatusbarView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\Controls\StatusbarView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\SettingsView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\SettingsView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\ShellView.g.cs" />
+    <Compile Include="11thLauncher\obj\Debug\Views\ShellView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\App.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\App.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\GeneratedInternalTypeHelper.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\GeneratedInternalTypeHelper.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\AboutView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\AboutView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\AddonsView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\AddonsView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\GameView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\GameView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ParametersView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ParametersView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ProfileManagerView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ProfileManagerView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ProfileSelectorView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ProfileSelectorView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\RepositoryStatusView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\RepositoryStatusView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ServerQueryView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ServerQueryView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ServerStatusView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\ServerStatusView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\StatusbarView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\Controls\StatusbarView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\SettingsView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\SettingsView.g.i.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\ShellView.g.cs" />
+    <Compile Include="11thLauncher\obj\Release\Views\ShellView.g.i.cs" />
+    <Compile Include="11thLauncher\Program.cs" />
+    <Compile Include="11thLauncher\Properties\AssemblyInfo.cs" />
+    <Compile Include="11thLauncher\Properties\Resources.Designer.cs" />
+    <Compile Include="11thLauncher\Properties\Settings.Designer.cs" />
+    <Compile Include="11thLauncher\Resources\Strings.Designer.cs" />
+    <Compile Include="11thLauncher\Services\AbstractService.cs" />
+    <Compile Include="11thLauncher\Services\AddonService.cs" />
+    <Compile Include="11thLauncher\Services\Arma3SyncService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IAddonService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IAddonSyncService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IGameService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IParameterService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IProfileService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\ISecurityService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IServerQueryService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\ISettingsService.cs" />
+    <Compile Include="11thLauncher\Services\Contracts\IUpdaterService.cs" />
+    <Compile Include="11thLauncher\Services\GameService.cs" />
+    <Compile Include="11thLauncher\Services\LegacySettingsService.cs" />
+    <Compile Include="11thLauncher\Services\ParameterService.cs" />
+    <Compile Include="11thLauncher\Services\ProfileService.cs" />
+    <Compile Include="11thLauncher\Services\SecurityService.cs" />
+    <Compile Include="11thLauncher\Services\ServerQueryService.cs" />
+    <Compile Include="11thLauncher\Services\SettingsService.cs" />
+    <Compile Include="11thLauncher\Services\UpdaterService.cs" />
+    <Compile Include="11thLauncher\Util\EnumerationExtension.cs" />
+    <Compile Include="11thLauncher\Util\ExtensionMethods.cs" />
+    <Compile Include="11thLauncher\Util\ILogger.cs" />
+    <Compile Include="11thLauncher\Util\Logger.cs" />
+    <Compile Include="11thLauncher\Util\ParameterTemplateSelector.cs" />
+    <Compile Include="11thLauncher\ViewModels\AboutViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\AddonsViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\GameViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\ParametersViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\ProfileManagerViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\ProfileSelectorViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\RepositoryStatusViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\ServerQueryViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\ServerStatusViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\Controls\StatusbarViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\SettingsViewModel.cs" />
+    <Compile Include="11thLauncher\ViewModels\ShellViewModel.cs" />
+    <Compile Include="11thLauncher\Views\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\AddonsView.xaml.cs">
+      <DependentUpon>AddonsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\GameView.xaml.cs">
+      <DependentUpon>GameView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\ParametersView.xaml.cs">
+      <DependentUpon>ParametersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\ProfileManagerView.xaml.cs">
+      <DependentUpon>ProfileManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\ProfileSelectorView.xaml.cs">
+      <DependentUpon>ProfileSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\RepositoryStatusView.xaml.cs">
+      <DependentUpon>RepositoryStatusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\ServerQueryView.xaml.cs">
+      <DependentUpon>ServerQueryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\ServerStatusView.xaml.cs">
+      <DependentUpon>ServerStatusView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\Controls\StatusbarView.xaml.cs">
+      <DependentUpon>StatusbarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="11thLauncher\Views\ShellView.xaml.cs">
+      <DependentUpon>ShellView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="11thLauncher.Updater\obj\Debug\11thLauncher.Updater.g.resources" />
+    <EmbeddedResource Include="11thLauncher.Updater\obj\Debug\_11thLauncher.Updater.Properties.Resources.resources" />
+    <EmbeddedResource Include="11thLauncher.Updater\obj\Release\11thLauncher.Updater.g.resources" />
+    <EmbeddedResource Include="11thLauncher.Updater\obj\Release\_11thLauncher.Updater.Properties.Resources.resources" />
+    <EmbeddedResource Include="11thLauncher.Updater\Properties\Resources.resx" />
+    <EmbeddedResource Include="11thLauncher\obj\Debug\11thLauncher.g.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Debug\_11thLauncher.Properties.Resources.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Debug\_11thLauncher.Resources.Strings.es-ES.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Debug\_11thLauncher.Resources.Strings.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Release\11thLauncher.g.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Release\_11thLauncher.Properties.Resources.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Release\_11thLauncher.Resources.Strings.es-ES.resources" />
+    <EmbeddedResource Include="11thLauncher\obj\Release\_11thLauncher.Resources.Strings.resources" />
+    <EmbeddedResource Include="11thLauncher\Properties\Resources.es-ES.resx" />
+    <EmbeddedResource Include="11thLauncher\Properties\Resources.resx" />
+    <EmbeddedResource Include="11thLauncher\Resources\Strings.es-ES.resx" />
+    <EmbeddedResource Include="11thLauncher\Resources\Strings.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include=".vs\Exile\v16\" />
+    <Folder Include="11thLauncher\bin\Release\es-ES\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
